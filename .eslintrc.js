@@ -26,7 +26,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
     project: [
-      './tsconfig.eslint.json',
+      './tsconfig.json',
       './packages/*/tsconfig.json',
       /**
        * We are currently in the process of transitioning to nx's out of the box structure and
@@ -297,6 +297,7 @@ module.exports = {
         './packages/eslint-plugin-internal/src/rules/**/*.ts',
         './packages/eslint-plugin-tslint/src/rules/**/*.ts',
         './packages/eslint-plugin/src/configs/**/*.ts',
+        './packages/core/src/configs/**/*.ts',
         './packages/eslint-plugin/src/rules/**/*.ts',
       ],
       rules: {
@@ -358,6 +359,7 @@ module.exports = {
       files: [
         './packages/scope-manager/src/lib/*.ts',
         './packages/eslint-plugin/src/configs/*.ts',
+        './packages/core/src/configs/*.ts',
       ],
       rules: {
         '@typescript-eslint/internal/no-poorly-typed-ts-props': 'off',

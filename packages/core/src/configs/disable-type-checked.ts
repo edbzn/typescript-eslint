@@ -5,8 +5,12 @@
 // For developers working in the typescript-eslint monorepo:
 // You can regenerate it using `yarn generate:configs`
 
-export = {
-  parserOptions: { project: null, program: null },
+import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint';
+
+export default (
+  _plugin: FlatConfig.Plugin,
+  _parser: FlatConfig.Parser,
+): FlatConfig.Config => ({
   rules: {
     '@typescript-eslint/await-thenable': 'off',
     '@typescript-eslint/consistent-type-exports': 'off',
@@ -56,4 +60,5 @@ export = {
     '@typescript-eslint/switch-exhaustiveness-check': 'off',
     '@typescript-eslint/unbound-method': 'off',
   },
-};
+  languageOptions: { parserOptions: { project: null, program: null } },
+});

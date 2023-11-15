@@ -1,3 +1,5 @@
+// NOTE: keep this in sync with packages/core/src/configs/eslint-recommended.ts
+
 /**
  * This is a compatibility ruleset that:
  * - disables rules from eslint:recommended which are already handled by TypeScript.
